@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/navigation_first">
+
+    <fragment
+        android:id="@+id/navigation_first"
+        android:name="com.illia.lr3.ui.fragments.FirstFragment"
+        tools:layout="@layout/fragment_first"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/firstToSecond"
+            app:destination="@id/navigation_second" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_second"
+        android:name="com.illia.lr3.ui.fragments.SecondFragment"
+        tools:layout="@layout/fragment_second"
+        android:label="SecondFragment" >
+        <argument
+            android:name="forecast"
+            app:argType="com.illia.lr3.Forecast" />
+    </fragment>
+</navigation>
