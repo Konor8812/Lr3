@@ -46,7 +46,7 @@ class SecondFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        var text = "Humidity " + args.forecast.forecastAsString.trim() + " stands at " + args.forecast.humidity.toString() + "\n\n"
+        var text = "Humidity " + args.forecast.forecastAsString.trim() + " stands at " + args.forecast.humidity.toString()
         binding.textView.setText(text)
         Glide.with(view)
             .load(args.forecast.imageUrl)

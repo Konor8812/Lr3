@@ -11,12 +11,15 @@
         android:id="@+id/forecastDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_weight="1"
+        android:gravity="center"
         android:text="Test"
         android:textAlignment="center"
-        android:gravity="center"
         android:textColor="@color/purple_200"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imagePlaceholder"
@@ -25,7 +28,8 @@
         android:layout_weight="2"
         android:src="@drawable/ic_launcher_background"
         tools:ignore="content_description"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="10dp" />
+        app:layout_constraintStart_toEndOf="@id/forecastDesc"
+        android:layout_marginStart="12dp"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

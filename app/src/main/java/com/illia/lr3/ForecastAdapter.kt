@@ -8,10 +8,17 @@ import com.illia.lr3.databinding.RecycleRowBinding
 
 
 class ForecastAdapter(
-    private val entityList: List<Forecast>,
     private val onItemClick: (position: Int) -> Unit
 ) :
     RecyclerView.Adapter<ForecastAdapter.ForecastHolder>() {
+
+    private val entityList = ArrayList<Forecast>()
+
+    public fun setList(list: List<Forecast>){
+        entityList.clear()
+        entityList.addAll(list)
+        notifyDataSetChanged()
+    }
 
     class ForecastHolder(
         private val itemBinding: RecycleRowBinding,
